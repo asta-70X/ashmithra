@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #faf7f0;
+  --green: #204d3c;
+  --green-dark: #183d30;
+  --sage: #eaf0e4;
+  --ink: #24372d;
+  --muted: #617064;
+  --line: #d8ded2;
+  --gold: #f2d474;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding-bottom: 78px; background: var(--paper); color: var(--ink); font-family: "Noto Sans Tamil", "Latha", Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.5; }
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+.page-shell { width: min(100% - 48px, 1280px); margin-inline: auto; }
+.field { width: 100%; border: 1px solid var(--line); background: #fff; border-radius: 10px; color: var(--ink); padding: 13px 15px; outline: none; transition: border-color .18s, box-shadow .18s; }
+.field:focus { border-color: var(--green); box-shadow: 0 0 0 3px #204d3c1a; }
+.field::placeholder { color: #879188; }
+.btn-primary { min-height: 54px; border: 0; border-radius: 12px; padding: 14px 18px; background: var(--green); color: #fff; font-weight: 700; transition: background .18s, transform .18s; }
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+.btn-secondary { min-height: 54px; border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; background: #fff; color: var(--green); font-weight: 700; transition: border-color .18s, background .18s; }
+.btn-secondary:hover { border-color: var(--green); background: #fbfcf9; }
+.soft-card { border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.icon { display: block; width: 24px; height: 24px; object-fit: contain; }
+.mobile-nav { position: fixed; inset: auto 0 0; z-index: 50; display: flex; gap: 4px; border-top: 1px solid #e5e6dc; background: #fff; padding: 10px 12px 14px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (min-width: 768px) { body { padding-bottom: 0; } .mobile-nav { display: none; } }
+@media (max-width: 640px) { .page-shell { width: min(100% - 40px, 440px); } }
